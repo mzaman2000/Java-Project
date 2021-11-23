@@ -1,0 +1,216 @@
+package final2;
+
+import java.util.*;
+
+
+
+
+
+
+public class Grades {
+
+	
+	private static Map<Integer, Records > records = new HashMap<Integer, Records >();
+	
+	private static Map<Integer, Records > record2 = new HashMap<Integer, Records >();
+	private static Scanner scan = new Scanner( System.in );
+	
+	  public static String getLetterGrade( double score ) {
+			String letterGrade = null;
+			if( score >= 90 && score <= 100 ) {
+				letterGrade = "A";
+			}else if( score >= 80 && score < 90  ) {
+				letterGrade = "B";
+			}else if( score >= 70 && score < 80  ) {
+				letterGrade = "C";
+			}
+				
+			return letterGrade;
+	  }
+	  
+		
+	
+	
+			
+			
+			
+			
+	
+	
+	
+	public static void main(String[] args) {
+		
+		
+		
+		//Map to show total grades in an organized chart
+		records.put(23207161, new Records("Philip, Don       ", 10, 42, 41, 22, 41, 2, 6));
+		records.put(23207162, new Records("Boglo,Germain C   ", 10, 32, 41, 20, 41, 2, 6));
+		records.put(23207163, new Records("Boone,Michael P   ", 10, 43, 49, 21, 40, 2, 6));
+		records.put(23207164, new Records("Brito,Milca       ", 10, 45, 45, 30, 40, 2, 6));
+		records.put(23207165, new Records("Cara,Alil         ", 10, 40, 50, 21, 45, 2, 6));
+		records.put(23207166, new Records("Cozier,Marquise   ", 8, 40, 41, 22, 42, 2, 6));
+		records.put(23207167, new Records("Dindyal,Rajendra N", 10, 45, 50, 30, 49, 2, 6));
+		records.put(23207168, new Records("Francois,Khalifa  ", 10, 41, 43, 20, 41, 2, 6));
+		records.put(23207169, new Records("Hasan,MD Jahirul  ", 10, 45, 47, 30, 45, 2, 6));
+		records.put(23207170, new Records("Kasse,El Hadji D  ", 7.5, 43, 42, 24, 40, 2, 6));
+		records.put(23207171, new Records("Saron, Eddi       ", 10, 49, 48, 30, 43, 2, 6));
+		records.put(23207172, new Records("Liriano,Pedro     ", 10, 43, 44, 28, 41, 2, 6));
+		records.put(23207173, new Records("Mcneal,Destini    ", 10, 45, 45, 25, 45, 2, 6));
+		records.put(23207174, new Records("Mercado,Gerald    ", 8, 40, 44, 25, 48, 2, 6));
+		records.put(23207175, new Records("Lous, Lili        ", 8.5, 44, 45, 28, 44, 2, 6));
+		records.put(23207176, new Records("Negrete,Ulises    ", 9, 40, 45, 25, 37, 2, 6));
+		records.put(23207177, new Records("Onyenadum,Samuel  ", 10, 39, 43, 25, 37, 2, 6));
+		records.put(23207178, new Records("Palacios,Allan    ", 9.5, 40, 50, 28, 46, 2, 6));
+		records.put(23207179, new Records("Ponce,Josiah      ", 10, 28, 43, 21, 41, 2, 6));
+		records.put(23207180, new Records("Sarker,Ayon       ", 10, 35, 40, 20, 45, 2, 6));
+		records.put(23207181, new Records("Cabrera,Johnny D  ", 10, 37, 34, 20, 42, 2, 6));
+		records.put(23207182, new Records("Alarcon, Rob      ", 10, 44, 47, 21, 48, 2, 6));
+		
+		
+		//Map to show a specific students grade
+		record2.put(23207161, new Records("Philip, Don", 10, 42, 41, 22, 41, 2, 6));
+		record2.put(23207162, new Records("Boglo,Germain C", 10, 32, 41, 20, 41, 2, 6));
+		record2.put(23207163, new Records("Boone,Michael P", 10, 43, 49, 21, 40, 2, 6));
+		record2.put(23207164, new Records("Brito,Milca", 10, 45, 45, 30, 40, 2, 6));
+		record2.put(23207165, new Records("Cara,Alil", 10, 40, 50, 21, 45, 2, 6));
+		record2.put(23207166, new Records("Cozier,Marquise", 8, 40, 41, 22, 42, 2, 6));
+		record2.put(23207167, new Records("Dindyal,Rajendra N", 10, 45, 50, 30, 49, 2, 6));
+		record2.put(23207168, new Records("Francois,Khalifa", 10, 41, 43, 20, 41, 2, 6));
+		record2.put(23207169, new Records("Hasan,MD Jahirul", 10, 45, 47, 30, 45, 2, 6));
+		record2.put(23207170, new Records("Kasse,El Hadji D", 7.5, 43, 42, 24, 40, 2, 6));
+		record2.put(23207171, new Records("Saron, Eddi", 10, 49, 48, 30, 43, 2, 6));
+		record2.put(23207172, new Records("Liriano,Pedro", 10, 43, 44, 28, 41, 2, 6));
+		record2.put(23207173, new Records("Mcneal,Destini", 10, 45, 45, 25, 45, 2, 6));
+		record2.put(23207174, new Records("Mercado,Gerald", 8, 40, 44, 25, 48, 2, 6));
+		record2.put(23207175, new Records("Lous, Lili", 8.5, 44, 45, 28, 44, 2, 6));
+		record2.put(23207176, new Records("Negrete,Ulises", 9, 40, 45, 25, 37, 2, 6));
+		record2.put(23207177, new Records("Onyenadum,Samuel", 10, 39, 43, 25, 37, 2, 6));
+		record2.put(23207178, new Records("Palacios,Allan", 9.5, 40, 50, 28, 46, 2, 6));
+		record2.put(23207179, new Records("Ponce,Josiah", 10, 28, 43, 21, 41, 2, 6));
+		record2.put(23207180, new Records("Sarker,Ayon", 10, 35, 40, 20, 45, 2, 6));
+		record2.put(23207181, new Records("Cabrera,Johnny D", 10, 37, 34, 20, 42, 2, 6));
+		record2.put(23207182, new Records("Alarcon, Rob", 10, 44, 47, 21, 48, 2, 6));
+		
+		System.out.println("To view grades for all students: press 1");
+		System.out.println("To view a specific grade for a student: press 2");
+		System.out.println("To view the total grade and letter grade for all students: press 3");
+		System.out.print("Enter number: ");
+		int userChoice = scan.nextInt();
+		
+		if (userChoice == 1) {
+			Iterator trav=records.entrySet().iterator();
+			while(trav.hasNext()) {
+				Map.Entry record=(Map.Entry)trav.next();  
+				Records j=(Records)record.getValue();
+				
+				
+				System.out.println(System.lineSeparator() +"Student ID: " + record.getKey() +System.lineSeparator() +"Student Name: " + j.name + System.lineSeparator() +"Quiz: " + j.quiz + System.lineSeparator() + 
+						"Test 1 score: " + j.test1 + System.lineSeparator() + "Midterm: " + j.midterm + System.lineSeparator() + "Test 3: " + j.test3 + System.lineSeparator() +  "Final: " + j.final1 + 
+						System.lineSeparator() + "Presentation: " + j.presentation + System.lineSeparator() +  "Coding Project: " + j.codingProject + System.lineSeparator() + "Grade: " + Math.round(j.Avg()) + 
+						System.lineSeparator());
+			
+		}
+			
+					
+				
+				}
+				
+		
+				
+				
+				
+			
+		
+				
+		
+		else if (userChoice == 2) {
+			for( Integer key: record2.keySet() ) {
+				System.out.println("Enter ID: ");
+				int p = scan.nextInt();
+					if(record2.containsKey(key))
+						
+					
+						System.out.println(record2.get(p) );
+					
+						break;
+				}
+			
+		
+		}
+		else if (userChoice == 3) {
+			int count = 0;
+			int countB = 0;
+			int countC = 0;
+			double pscore = 0;
+			double tscore = 0;
+			double Average = 0;
+			Iterator trav=records.entrySet().iterator();
+			while(trav.hasNext()) {
+				Map.Entry record=(Map.Entry)trav.next(); 
+				Records j=(Records)record.getValue();
+				HashMap <String, Double> studentMap = new HashMap <String, Double> ();
+				studentMap.put(j.name, j.Avg() );
+				for( String key : studentMap.keySet() ) {
+					pscore = tscore;
+					
+					double score = studentMap.get( key );
+					String grade = getLetterGrade(score );
+					
+					
+					System.out.println(" Student: " + key+ " | Score: "+ Math.round(score)+ " | Grade: "+ grade);
+					if(grade == "A"){
+						count = count +1;
+						
+					}
+					
+					if(grade == "B"){
+						countB = countB +1;
+						
+					}
+					
+					if(grade == "C"){
+						countC = countC +1;
+						
+					}
+					
+					if (score>0) {
+						tscore = pscore+ Math.round(score);
+					}
+					
+				}
+				
+				
+				
+					
+				
+				
+				
+				
+			
+		}
+			System.out.println("There are "+ count + " A's," + " " + countB + " B's, and" + " " + countC + " C's" );
+			
+			Average =tscore / records.size();
+			System.out.println("Class Average: "+ Average);
+	
+		
+		
+		
+}
+		else {
+			System.out.println("Invalid number");
+		}
+	}
+		
+
+
+
+
+
+
+
+
+
+
+	 
+}

@@ -1,0 +1,157 @@
+package final2;
+
+public class Records {
+
+	String studentID;
+	String name;
+	double quiz;
+	double test1;
+	double midterm;
+	double test3;
+	double final1;
+	double presentation;
+	double codingProject;
+	double total;
+	String letterGrade;
+	
+	public Records (String name, double quiz, double test1, double midterm, double test3,
+			double final1, double presentation, double codingProject) {
+		this.name = name;
+		this.quiz = quiz;
+		this.test1 = test1;
+		this.midterm = midterm;
+		this.test3 = test3;
+		this.final1 = final1;
+		this.presentation = presentation;
+		this.codingProject = codingProject;
+		
+		
+	
+		
+	}
+	public void Student(String name, double quiz, double test1, double midterm, double test3,
+			double final1, double presentation, double codingProject){
+				
+			}
+	
+
+	public String getStudentID() {
+		return studentID;
+		
+	}
+
+	public void setStudentID(String studentID) {
+		this.studentID = studentID;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getQuiz() {
+		return quiz;
+	}
+
+	public void setQuiz(double quiz) {
+		this.quiz = quiz;
+	}
+
+	public double getTest1() {
+		return test1;
+	}
+
+	public void setTest1(double test1) {
+		this.test1 = test1;
+	}
+
+	public double getMidterm() {
+		return midterm;
+	}
+
+	public void setMidterm(double midterm) {
+		this.midterm = midterm;
+	}
+
+	public double getTest3() {
+		return test3;
+	}
+
+	public void setTest3(double test3) {
+		this.test3 = test3;
+	}
+
+	public double getFinal1() {
+		return final1;
+	}
+
+	public void setFinal1(double final1) {
+		this.final1 = final1;
+	}
+
+	public double getPresentation() {
+		return presentation;
+	}
+
+	public void setPresentation(double presentation) {
+		this.presentation = presentation;
+	}
+
+	public double getCodingProject() {
+		return codingProject;
+	}
+
+	public void setCodingProject(double codingProject) {
+		this.codingProject = codingProject;
+	}
+
+	public double getTotal() {
+		return total;
+	}
+
+	public void setTotal(double total) {
+		this.total = total;
+	}
+
+	public String getLetterGrade() {
+		return letterGrade;
+	}
+
+	public void setLetterGrade(String letterGrade) {
+		this.letterGrade = letterGrade;
+	}
+	public String toString() {
+		return "Student name " + name + ", quiz = " + quiz + ", test1 = " + test1
+				+ ", midterm = " + midterm +", test = " + test3 + ", final = " + final1 + ", presentation = " + presentation
+				+ ", codingProject = " + codingProject;
+	}
+	 public double Avg() {
+		 quiz = quiz/10;
+		 quiz = quiz*.02;
+		 test1 = test1/50;
+		 test1 = test1*.10;
+		 midterm = midterm/50;
+		 midterm = midterm * .30;
+		 test3 = test3/30;
+		 test3 = test3 * .10;
+		 final1 = final1/50;
+		 final1 = final1*.40;
+		 presentation = presentation/2;
+		 presentation = presentation * .02;
+		 codingProject = codingProject/6;
+		 codingProject = codingProject*.06;
+		 
+	        return ((quiz+test1+midterm+test3+final1+presentation+codingProject) * 100);
+	 }
+	
+	  
+	
+	
+	
+	
+
+
+}
